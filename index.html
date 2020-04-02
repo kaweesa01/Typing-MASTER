@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <title>
+        Typing Warlock
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="main-container">    
+
+        <div class="top">
+            <h1>Typing Wizard</h1>
+          <!--
+<select class="difficulty">
+                <option disabled selected>Select Dificulty</option>
+                <option>Easy</option>
+                <option>Medium</option>
+                <option>Hard</option>
+            </select>
+          -->  
+        </div>
+
+        <div class="bottom">
+            <div class="left">
+
+                <div class="gameOver bgVisisbility">
+                    <div class="game-msg"><h2 class="msg">Game <br>Over</h2></div>
+            
+                    <div><button class="try-btn">Try again</button></div>
+                </div>
+
+                <div class="score-timer_container">
+
+                    <div class="scores">
+                        <h2 id="score">Score</h2>
+                        <div class="score-container">
+                            <h3 id="score-label">00</h3>
+                        </div>
+
+                    </div>
+
+                    <div class="Timers">
+                        <h2 id="timer">Timer</h2>
+                        <div class="timer-container">
+                            <h3 id="timer-label">10s</h3>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="word-container">
+                    <input type="text" id="displayer" value="" disabled>
+                </div>
+
+                <div class="word-container answer">
+                    <input type="text" id="word" value="" placeholder="Type word">
+
+                  <!--<button id="ok-btn"><img src="svgs/tick-inside-circle.svg"></img></button>-->  
+                </div>
+
+                <div class="word-container buttons">
+                    <button id="start">Start</button>
+                    <button id="stop">Stop</button>
+                </div>
+
+            </div>
+
+            <div class="right">
+                <div class="Progress">
+
+                    <div class="progress-container">
+                        <div class="Passes">
+                            <h2>Passed</h2>
+                            <div class="pass-container">
+                                    <div class="passed-words">
+                                       <!--<h2 id="passed">boy</h2>--> 
+                                    </div>
+                            </div>
+
+                        </div>
+
+                        <div class="Failures">
+                            <h2>Failed</h2>
+                            <div class="fail-container">
+                                <div class="failed-words">
+                                  <!-- <h2 id="failed">
+                                       <span>Pagnacious</span>
+                                       <span>pagndios</span>
+                                    </h2>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results">
+                    <div class="total-time">
+                        <h3>Total time:.. </h3>
+                        <h3 id="time"> 0s</h3>
+                    </div>
+
+                    <div class="defficulty-result">
+                        <h3>Grade:..</h3>
+                        <h3 id="grade"></h3>
+                    </div>
+
+                    <div class="grade">
+                        <h3>Difficulty:..</h3>
+                        <h3>Easy</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <script rel="javascript" src="script.js"></script>
+</body>
+
+</html>
