@@ -33,11 +33,7 @@ body {
 .top {
     width: 100%;
     display: flex;
-
-    flex: {
-        direction: column;
-    }
-
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: rgba(236, 198, 92, 0.8);
@@ -47,28 +43,25 @@ body {
         font-weight: 1000;
         height: 100px;
         font-size: 2.8rem;
-    }
-
-  /*  .difficulty {
-        width: 120px;
-        height: 30px;
-        font-size: 0.8rem;
-        border-radius: 8px;
-        border: $defaultBorder;
-        color: rgb(70, 24, 24);
-        margin: 10px 0px;
+        transform: translateY(10%);
     }
 
 
-    .difficulty:focus {
-        outline: none;
-    }*/
 }
 
 
 
 .bottom {
     display: flex;
+}
+
+
+@media(max-width:1094px) {
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .left {
@@ -87,24 +80,32 @@ body {
         background-color: rgba(77, 226, 8, 0.9);
         width: 42.5%;
         height: 67%;
-       
         animation-name: backDrop;
         animation-duration: 1s;
         animation-delay: 0s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
-    
+
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    
+
         .game-msg {
             font-size: 0.5rem;
             color: red;
             text-align: center;
         }
-    
+
+
+        @media(max-width:1094px) {
+            .game-msg {
+                position: absolute;
+                top: 16%;
+                transform: translateX(0%);
+            }
+        }
+
         .try-btn {
             position: absolute;
             top: 75%;
@@ -116,21 +117,39 @@ body {
             color: white;
             cursor: pointer;
             font-size: 2rem;
-    
+
         }
-    
+
+
+        @media(max-width:1094px) {
+            .try-btn {
+                position: absolute;
+                top: 85%;
+                transform: translateX(-50%);
+            }
+        }
+
         @keyframes backDrop {
             0% {
                 background-color: rgb(226, 33, 8);
             }
-    
+
             100% {
                 background-color: rgba(77, 226, 8, 1);
             }
         }
-    
+
     }
-    
+
+    @media(max-width:1094px) {
+        .gameOver {
+            width: 85%;
+            height: 100%;
+        }
+    }
+
+
+
 
     ///////back drop
 
@@ -145,6 +164,11 @@ body {
         font-size: 2.5rem;
     }
 
+    @media(max-width:1094px) {
+        h2 {
+            font-size: 4.8rem;
+        }
+    }
 
     .score-timer_container {
         display: flex;
@@ -176,6 +200,24 @@ body {
             justify-content: space-between;
             align-items: center;
         }
+
+
+        @media(max-width:1094px) {
+            .scores {
+                width: 250px;
+            }
+
+            .Timers {
+                width: 250px;
+            }
+        }
+    }
+
+
+    @media(max-width:1094px) {
+        .score-timer_container {
+            width: 700px;
+        }
     }
 
     .score-container,
@@ -191,7 +233,33 @@ body {
             justify-self: center;
             font-size: 2.5rem;
         }
+
+        @media(max-width:1094px) {
+
+            h3 {
+                font-size: 4.8rem;
+            }
+        }
     }
+
+
+    @media(max-width:1094px) {
+        .score-container {
+            width: 70%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .timer-container {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
 
     .word-container {
         margin-top: 20px;
@@ -220,11 +288,26 @@ body {
             font-weight: 900px;
             color: black;
         }
+
+        @media(max-width:1094px) {
+            #displayer {
+                font-size: 1.6rem;
+                height: 45px;
+            }
+        }
+
     }
 
     .timer-container {
         margin-top: 10px;
         width: 40%;
+    }
+
+    @media(max-width:1094px) {
+        .timer-container {
+            margin-top: 10px;
+            width: 70%;
+        }
     }
 
     .answer {
@@ -236,6 +319,14 @@ body {
             font-size: 1.5rem;
             text-align: center;
         }
+
+        @media(max-width:1094px) {
+            input {
+                font-size: 1.8rem;
+                height: 65px;
+            }
+        }
+
     }
 
     .buttons {
@@ -246,8 +337,12 @@ body {
             font-size: 1.2rem;
         }
 
-        #skip {
-            background-color: rgb(103, 152, 216);
+        @media(max-width:1094px) {
+            button {
+                width: 75px;
+                height: 75px;
+                font-size: 1.4rem;
+            }
         }
 
         #start {
@@ -257,6 +352,14 @@ body {
         #stop {
             background-color: rgb(231, 86, 67);
         }
+    }
+}
+
+
+@media(max-width:1094px) {
+    .left {
+        width: 100%;
+        height: 600px;
     }
 }
 
@@ -305,19 +408,30 @@ body {
             margin: 10px;
             overflow-y: auto;
         }
+
     }
 
-    #passed{
+    @media(max-width:1094px) {
+        .progress-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 85%;
+        }
+    }
+
+    #passed {
         font-weight: 100;
         padding: 10px 20px;
         font-size: 1.5rem;
     }
 
-    #failed{
+    #failed {
         font-weight: 100;
         padding: 10px 20px;
         font-size: 1.5rem;
     }
+
     .results {
         display: flex;
         flex-direction: column;
@@ -330,5 +444,22 @@ body {
             color: $textColor;
         }
 
+    }
+
+    @media(max-width:1094px) {
+        .results {
+            margin-top: 20px;
+            width: 85%;
+            font-size: 1.7rem;
+        }
+    }
+}
+
+
+@media(max-width:1094px) {
+    .right {
+        width: 100%;
+        visibility: hidden;
+        position: absolute;
     }
 }

@@ -152,9 +152,9 @@ var AppController = (function (variables, data, UIctr) {
             grading = 'D - Begginer';
         } else if (total <= 60) {
             grading = 'c - Junior';
-        } else if (total >= 70) {
+        } else if (total <= 70) {
             grading = 'B - Senior';
-        } else if (total >= 80) {
+        } else if (total >= 150) {
             grading = 'A - Master';
         }
 
